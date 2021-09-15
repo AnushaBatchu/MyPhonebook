@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone Number</th>
+    </tr>
+  </thead>
+  <body data-bind="foreach: AddressBook.contacts">
+    <tr>
+      <td data-bind="text: name"></td><br>
+      <td data-bind="text: phoneNumber"></td>
+    </tr>
+  </body>
+</table>
+</body>
+</html>

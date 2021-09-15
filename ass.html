@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="myjs.js">
+   </script>
+<style type="text/css">
+ *{
+   box-sizing:border-box;
+ }
+ #myinput{
+   background-position:10px 12px;
+   background-repeat:no-repeat;
+    width:15;
+    font-size:16px;
+    padding:12px ;
+    border:1px solid#ddd;
+    margin-buttom:12px;
+ }
+ #myul{
+  list-style-type:none;
+  padding:0;
+  margin:0;
+ }
+ #myul li a{
+      border: 1px solid #ddd;
+      margin-top: -1px;/*prevent double borders*/
+        background-color:no-repeat;
+        padding:10px;
+        font-size:16px;
+        text-decoration:none;
+         color: black;
+          display: block;    
+      
+ }     
+      
+  #myUL li a: hover:not(.header)  {
+    background-color: #eee;
+  }  
+  
+</style>
+
+</head>
+<body bgcolor="lightpink">
+
+<center>
+<h1>MY PHONE BOOK</h1>
+</center>
+<tr>
+ <td> <center>Enter search:<input type="text" id="myinput" onkeyup="myfunction()" name="search" placeholder="SEARCH for names...." title="type in a name"> </td></center><br>
+ <td> <center>NUMBER OF CONTACTS TO SHOW:<input type="numbers" name="number of contacts show" placeholder="NUMBER OF CONTACTS TO SHOW"></center></td><br>
+</tr> 
+<ul id="myUL">
+     <li><a href="#">Bindhu</a></li>
+     <li><a href="#">sindhu</a></li>
+     <li><a href="#">priya</a></li>
+     <li><a href="#">prathyu</a></li>
+     <li><a href="#">harry</a></li>
+      <li><a href="#">gows</a></li>
+      <li><a href="#">cindy</a></li>
+</ul>
+<div class="panel-body">
+          <div class="form-group has-info has-feedback">
+             <label for="seacrh" class="col-sm-2 control-label">Search: </label>
+                    <div class="col-sm-5">
+                        <input type="text"  name="search" placeholder ="searchContact" class="form-control">
+                        <span class="glyphicon glyphicon-search form-control-feedback"></span>                                            
+                    </div>
+     <span>No of contacts to show:<input type="number" step="1" min="3" ng-model="rowLimit"/></span>
+                </div>
+          </div>
+          </form>
+         <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                        <th>Names</th>
+                        <th>Phone Number</th>
+                      <th>E-mail</th>
+                        <th>Options</th>
+                    </tr>
+                   </thead>
+                   <tbody>
+   <tr ng-repeat="contact in info | limitTo:rowLimit| orderBy: 'name'| filter: search">
+           <td>contact.name</td>
+           <td>contact.phone</td>
+           <td>contact.email</td>
+                       
+    <td><a href="#" click="removeContact()"><span class="glyphicon glyphicon-trash"></span>&nbsp;</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+          
+   
+</script>
+</body>
+</html>

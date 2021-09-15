@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+    
+</script>
+
+</head>
+  <body bgcolor="lightpink">
+      
+           <center>
+             <h1 class="text-center">MyPhone Book</h1>  </center>         
+             <div class="col-sm-5">
+                       <div>Search <input type="text"  name="search" placeholder ="searchContact" class="form-control"></div>
+                       <td>No of contacts to show:<input type="number" step="1" min="3" model="rowLimit"/></td><br>
+                       <tr>
+                        <th>Names</th>
+                        <th>Phone Number</th>
+                        <th>E-mail</th>
+                        <th>Options</th>
+                    </tr>
+    <ul >
+    <li><a class="active">1.Bindhu</a></li>
+    <li><a href="#">2.Priya</a></li>
+    <li><a href="#">3.Prathyu</a></li>
+    <li><a href="#">4.harry</a></li>
+    <li><a href="#">5.kalpana</a></li>
+  </ul>
+ <div> Name:<input type="text" class="form-control" text-angular name="newName" maxlength="99"></div>
+    <div>phone number: <input type="tel" class="form-control" placeholder="xx-xxx-xxxx" ng-model="newPhone" ></div>
+  <div> Email: <input type="email" id="email" name="email" class="form-control" ng-model="newEmail" placeholder="email@example.com"></div>
+   <div><button class="btn btn-primary"  ng-click="addContact()"></div>
+   <div> <input type="button" name ="click" onclick="click"> Add Contact</div>
+  </body>
+</html>
+   
+    

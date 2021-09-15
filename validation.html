@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+       
+         function show (){
+         var fn =document.frm.fn;
+         var ln =document.frm.ln;
+         var email=document.frm.email;
+        	 if(fn.value==""){
+        		 alert("please enter firstName");
+        		 fn.focus();
+        	 }
+        	 else if(ln.value==""){
+        		 alert("please enter lastName");
+        		 ln.focus();
+        	 }
+        	 else if(email.value==""){
+        		 alert("please enter email");
+        		 email.focus();
+        	 }
+        	 
+        	  else{
+        			  
+        		 document.getElementById("result_container").innerHTML="Hello"+fn.value+""+ln.value+""+email;
+        	 }
+         }
+        	 
+</script>
+</head>
+<body bgcolor="lightyellow">
+<h1>Blank validation</h1>
+<form name="frm">
+      Enter first Name:<input type="text" name="fn"><br>
+      Enter last Name:<input type="text" name="ln"><br>
+      Enter email:<input type="text" name="email"><br>
+      
+      <input type="button" value="show" onClick="show()"><br>
+   
+</form>
+<div>
+ <p id="result_container"></p>
+ </div>
+</body>
+</html>
